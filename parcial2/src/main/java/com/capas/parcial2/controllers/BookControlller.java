@@ -35,11 +35,20 @@ public class BookControlller {
         bookService.deleteBook(id);
     }
 
-    @GetMapping("/books")
+    @GetMapping("/author")
     public List<Book> findByAuthor(@RequestParam String author) {
         return bookService.filterByAuthor(author);
     }
 
+    @GetMapping("/isbn")
+    public List<Book> findByIsbn(@RequestParam String isbn) {
+        return bookService.filterByIsbn(isbn);
+    }
+
+    @GetMapping("/language")
+    public List<Book> findByLanguage(@RequestParam String language) {
+        return bookService.filterByLanguage(language);
+    }
 
 
 }

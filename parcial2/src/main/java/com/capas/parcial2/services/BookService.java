@@ -77,4 +77,16 @@ public class BookService {
     public List<Book> filterByAuthor(String author) {
         return bookRepository.findByAuthor(author);
     }
+
+    public List<Book> filterByIsbn(String isbn) {
+        return bookRepository.findByIsbn(isbn);
+    }
+
+    public List<Book> filterByLanguage(String language) {
+        return bookRepository.findByLanguage(language);
+    }
+
+    public List<Book> filterByGenre(String genre) {
+        return bookRepository.findByGenre(genre);
+    }
 }

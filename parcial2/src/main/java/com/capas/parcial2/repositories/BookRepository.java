@@ -10,4 +10,6 @@ import java.util.List;
 public interface BookRepository extends JpaRepository<Book, Long> {
     List<Book> findByIsbn(String isbn);
     List<Book> findByAuthor(String author);
+    List<Book> findByLanguage(String language);
+    List<Book> findByGenre(String genre);
 }
