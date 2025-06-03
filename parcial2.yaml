@@ -1,0 +1,200 @@
+type: collection.insomnia.rest/5.0
+name: Parcial 2
+meta:
+  id: wrk_baf386fd394f47f78ea0a179acb26c80
+  created: 1748911451538
+  modified: 1748911451538
+collection:
+  - name: Book
+    meta:
+      id: fld_73d6ab959cda4be58e57a01b718e58f5
+      created: 1748911451541
+      modified: 1748911451541
+      sortKey: -1748907117450
+    children:
+      - url: http://localhost:8080/book
+        name: Book
+        meta:
+          id: req_27707205a36d4083b85f979414fa807f
+          created: 1748911451542
+          modified: 1748914358772
+          isPrivate: false
+          sortKey: -1748907141939
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title" : "Luz Negra",
+              "author":"Alvaro Menen Desleal",
+              "isbn" : "978-1-596-51068-7",
+            	"publicationYear" : 2000,
+            	"language" : "Español",
+            	"pages": 65,
+            	"genre" : "Novela"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/book/author?author=Edgar Allan Poe
+        name: Book
+        meta:
+          id: req_fcbf625f3c8942c292c5c9cf5c319a72
+          created: 1748911451542
+          modified: 1748917547778
+          isPrivate: false
+          sortKey: -1748907133938
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/book/3
+        name: UpdateLibro
+        meta:
+          id: req_f23e0b50a3a2486189db41e5dec4e299
+          created: 1748915375269
+          modified: 1748915926911
+          isPrivate: false
+          sortKey: -1748907137938.5
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title" : "Cuentos de Adas",
+            	"language" : "Español"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/book/3
+        name: Delete
+        meta:
+          id: req_139183ea2ad84a2e98c6e9cae3e308e3
+          created: 1748916010665
+          modified: 1748916027572
+          isPrivate: false
+          sortKey: -1748841338418
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/book/language?language=Edgar Allan Poe
+        name: BookLanguage
+        meta:
+          id: req_628e785f34c64b0d8192ad1a9eba668f
+          created: 1748917566734
+          modified: 1748917612569
+          isPrivate: false
+          sortKey: -1748874236178
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/book/isbn?isbn=Edgar Allan Poe
+        name: BookISBN
+        meta:
+          id: req_bfbf5916c1cc42cb96ff9891129c87fc
+          created: 1748917572585
+          modified: 1748917624469
+          isPrivate: false
+          sortKey: -1748857787298
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/book
+        name: BookAuthor
+        meta:
+          id: req_59d04a5a9add4c4594c6246960ab621d
+          created: 1748917583137
+          modified: 1748917591185
+          isPrivate: false
+          sortKey: -1748890685058
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_2b0007348d8a43c49a80e92ceb3e464e
+    created: 1748911451540
+    modified: 1748917336844
+  cookies:
+    - key: JSESSIONID
+      value: ED36D1BB8A96116B31860A66E76121DA
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-05-30T21:47:30.274Z
+      lastAccessed: 2025-06-03T02:22:16.844Z
+      id: 0cb4855b-0a9b-4fde-bfd0-8f2d67350358
+environments:
+  name: Base Environment
+  meta:
+    id: env_76b4c1b7b90444d7937fc0ba7883e754
+    created: 1748911451538
+    modified: 1748911451538
+    isPrivate: false
